@@ -1,0 +1,37 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "private",
+  "signedByOrg": "dewyeo",
+  "signedByOrgName": "dewyeo",
+  "rootUrls": [
+    "http://localhost:8080/"
+  ],
+  "plugin": "dewyeo-grafana-custom-plugin",
+  "version": "1.0.0",
+  "time": 1635894359027,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "CHANGELOG.md": "aaa78be4710ef41d56ddab1edbd180ef9f9adfea2f293109aae925dc33a1b9b3",
+    "module.js.LICENSE.txt": "0d8f66cd4afb566cb5b7e1540c68f43b939d3eba12ace290f18abc4f4cb53ed0",
+    "module.js.map": "72cc1a4d5f2cc79f621039ea2a7cf64447c79f047b9764b858e9cd3ab6bc4e20",
+    "plugin.json": "5b30de30eb7e64e59d58c820e88f6474947780dc4f9a65d96528cb32966ab729",
+    "README.md": "6ab62275feb0cd816bf9e7c031df34c06732ae9001791e455b5971a8de6a020a",
+    "img/logo.svg": "1defc6f7e585c67657bcfd8fddc599ee7dfa82f8674413f49fa274c2cd453ec6",
+    "module.js": "66368d8e9ca72238a2b63fb7dc9f1706d8a59acb7cbb11b6e9b8c5eacb080c18"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.1
+Comment: https://openpgpjs.org
+
+wqIEARMKAAYFAmGBxFcACgkQfk0ManCIZufWMwIJAUWnrrCqyvT44VBfHMci
+MKTxUSpHWm2F87zFshnYWKr6qMbN96/RyDB24juDM29fHgRxkoj4eRgY47eP
+UlyVsr8GAgkBV3UmMzjq4OklrmPWjn272jH7LgzkgL7OYA2ixQ0EeZhqq9TJ
+0HAM8NIDED98y+Rm/Q4azZFFvRNM4kyB8/WmV/8=
+=UnXm
+-----END PGP SIGNATURE-----

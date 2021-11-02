@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "panel",
   "name": "grafana-custom-plugin",
-  "id": "antrea-grafana-custom-plugin",
+  "id": "dewyeo-grafana-custom-plugin",
   "info": {
     "description": "",
     "author": {
@@ -26,7 +26,7 @@
     ],
     "screenshots": [],
     "version": "1.0.0",
-    "updated": "2021-11-01"
+    "updated": "2021-11-02"
   },
   "dependencies": {
     "grafanaDependency": ">=7.0.0",
