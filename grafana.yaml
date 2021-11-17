@@ -44,8 +44,11 @@ data:
         type: vertamedia-clickhouse-datasource
         access: proxy
         url: http://clickhouse-simple-01:8123
-        X-ClickHouse-User: clickhouse_operator
-        X-ClickHouse-Key: clickhouse_operator_password
+        editable: true
+        jsonData:
+          useYandexCloudAuthorization: true
+          xHeaderUser: clickhouse_operator
+          xHeaderKey: clickhouse_operator_password
 ---
 apiVersion: apps/v1
 kind: Deployment
