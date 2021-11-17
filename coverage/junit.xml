@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" time="1.386">
-  <testsuite name="placeholder test" errors="0" failures="0" skipped="0" timestamp="2021-11-10T05:54:10" time="0.647" tests="1">
-    <testcase classname="placeholder test should return true" name="placeholder test should return true" time="0.002">
+<testsuites name="jest tests" tests="2" failures="1" time="5.994">
+  <testsuite name="Sankey Diagram test" errors="0" failures="1" skipped="0" timestamp="2021-11-30T07:32:32" time="5.472" tests="2">
+    <testcase classname="Sankey Diagram test should return true" name="Sankey Diagram test should return true" time="0.002">
+    </testcase>
+    <testcase classname="Sankey Diagram test should render Chart component" name="Sankey Diagram test should render Chart component" time="0.028">
+      <failure>TypeError: ReactWrapper can only wrap valid elements
+    at new ReactWrapper (/Users/zyiou/Desktop/UI/grafana-custom-plugin/node_modules/enzyme/src/ReactWrapper.js:110:15)
+    at Object.mount (/Users/zyiou/Desktop/UI/grafana-custom-plugin/node_modules/enzyme/src/mount.js:10:10)
+    at Object.&lt;anonymous&gt; (/Users/zyiou/Desktop/UI/grafana-custom-plugin/src/module.test.ts:13:23)
+    at Object.asyncJestTest (/Users/zyiou/Desktop/UI/grafana-custom-plugin/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:100:37)
+    at /Users/zyiou/Desktop/UI/grafana-custom-plugin/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/zyiou/Desktop/UI/grafana-custom-plugin/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/zyiou/Desktop/UI/grafana-custom-plugin/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
     </testcase>
   </testsuite>
 </testsuites>

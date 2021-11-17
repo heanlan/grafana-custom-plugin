@@ -1,0 +1,94 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 1,
+  "iteration": 1637129745726,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "ClickHouse",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 18,
+        "w": 10,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "seriesCountSize": "sm",
+        "showSeriesCount": false,
+        "text": "Default value of text input option"
+      },
+      "pluginVersion": "7.5.2",
+      "targets": [
+        {
+          "database": "default",
+          "dateColDataType": "",
+          "dateLoading": false,
+          "dateTimeColDataType": "flowEndSeconds",
+          "dateTimeType": "DATETIME",
+          "datetimeLoading": false,
+          "extrapolate": true,
+          "format": "time_series",
+          "formattedQuery": "SELECT $timeSeries as t, count() FROM $table WHERE $timeFilter GROUP BY t ORDER BY t",
+          "intervalFactor": 1,
+          "query": "SELECT\n    SUM(bytesDelta), sourcePodName, destinationPodName, destinationIP\nFROM $table\n\nWHERE $timeFilter\n\nGROUP BY sourcePodName, destinationPodName, destinationIP\n",
+          "queryType": "randomWalk",
+          "rawQuery": "SELECT\n    SUM(bytesDelta), sourcePodName, destinationPodName, destinationIP\nFROM default.antrea\n\nWHERE flowEndSeconds >= toDateTime(1637107315) AND flowEndSeconds <= toDateTime(1637128915)\n\nGROUP BY sourcePodName, destinationPodName, destinationIP",
+          "refId": "A",
+          "round": "0s",
+          "skip_comments": true,
+          "table": "antrea",
+          "tableLoading": false
+        }
+      ],
+      "title": "Sankey Diagram Test",
+      "type": "dewyeo-grafana-custom-plugin"
+    }
+  ],
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "datasource": "ClickHouse",
+        "description": null,
+        "error": null,
+        "filters": [],
+        "hide": 0,
+        "label": null,
+        "name": "Filter",
+        "skipUrlSync": false,
+        "type": "adhoc"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Sankey Diagram",
+  "uid": "hnmzRQcnk",
+  "version": 7
+}
