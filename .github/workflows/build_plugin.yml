@@ -15,6 +15,7 @@ jobs:
           GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY}}
           TAG: ${{ github.ref }}
         run: |
+          node --version
           yarn install --pure-lockfile
           yarn build
           npx @grafana/toolkit plugin:sign --rootUrls http://localhost:3000
