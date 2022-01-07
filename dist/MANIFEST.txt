@@ -5,33 +5,32 @@ Hash: SHA512
 {
   "manifestVersion": "2.0.0",
   "signatureType": "private",
-  "signedByOrg": "dewyeo",
-  "signedByOrgName": "dewyeo",
+  "signedByOrg": "heanlan",
+  "signedByOrgName": "heanlan",
   "rootUrls": [
     "http://localhost:3000/"
   ],
-  "plugin": "dewyeo-grafana-custom-plugin",
+  "plugin": "heanlan-grafana-sankey-plugin",
   "version": "1.0.0",
-  "time": 1637128313009,
+  "time": 1641590726700,
   "keyId": "7e4d0c6a708866e7",
   "files": {
     "LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
     "CHANGELOG.md": "aaa78be4710ef41d56ddab1edbd180ef9f9adfea2f293109aae925dc33a1b9b3",
-    "module.js.LICENSE.txt": "0d8f66cd4afb566cb5b7e1540c68f43b939d3eba12ace290f18abc4f4cb53ed0",
-    "module.js.map": "bdca355c1ba0aeb565dc53e3c1782efca78242e451d40a0d7a5dbdcec1771f10",
-    "plugin.json": "a8f32bcd03e3ab9f81faf7d7d5e52c613045ac82164d1a9d57a73390f3720c7a",
+    "module.js.map": "e999ca47ea806ed9ba1b739032ef65c2d1239a85f3b0ed1163023cd33b4ffc45",
+    "plugin.json": "6964150ec7ee2e2a9be8a0459ee49a083b87bce0ebaf78c754c399a39d43d92d",
     "README.md": "6ab62275feb0cd816bf9e7c031df34c06732ae9001791e455b5971a8de6a020a",
     "img/logo.svg": "1defc6f7e585c67657bcfd8fddc599ee7dfa82f8674413f49fa274c2cd453ec6",
-    "module.js": "47a3c94e51eff8301b1f186fcea99a5500cff209d74a11b8428f690551cd15b3"
+    "module.js": "e9b9add66d8447559fd6db0a3a3832f850ef3d77d96d4e724213abf689237589"
   }
 }
 -----BEGIN PGP SIGNATURE-----
 Version: OpenPGP.js v4.10.1
 Comment: https://openpgpjs.org
 
-wqIEARMKAAYFAmGUmHkACgkQfk0ManCIZucwegIJAWob+I3RdyNg/qR3Dq7R
-OyAbeJuZlXWvSIkYI6eHnxgH1olsgBLs5M7EQYtnTUnC0jDENV+cdP6WazwJ
-+FIyJgnzAgkBe17/OKKOmaVaQ/r28bxeEMqVdPplzTixhUQKSf/tk97Pn8Mw
-eJed6qFr29kzBY/1vFNrl1cyi59qW+b8YA7PHFs=
-=GTF3
+wqIEARMKAAYFAmHYr8YACgkQfk0ManCIZueXPgIJAeKY1gvAPKXfqM338tYX
+tmoMgijbGdpIxRQO4KClD9wevNJgI1jTBaJdr/ToQEv37OjDa+LMS3gst0Iq
+o2T7eL0RAgkBzGXGWKhblWuUoswmf4Zxplf6urPPNpQPN7zjQ2sI8M1jGEsQ
+CEoWX4Iop5lVwtLubitK/qGZsLzS3skTCG7x0M8=
+=X5dS
 -----END PGP SIGNATURE-----

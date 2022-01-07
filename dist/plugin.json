@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "panel",
-  "name": "grafana-custom-plugin",
-  "id": "dewyeo-grafana-custom-plugin",
+  "name": "grafana-sankey-plugin",
+  "id": "heanlan-grafana-sankey-plugin",
   "info": {
     "description": "",
     "author": {
@@ -26,7 +26,7 @@
     ],
     "screenshots": [],
     "version": "1.0.0",
-    "updated": "2021-11-30"
+    "updated": "2022-01-07"
   },
   "dependencies": {
     "grafanaDependency": ">=7.0.0",

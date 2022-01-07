@@ -1,5 +1,5 @@
 {
-  "name": "dewyeo-grafana-custom-plugin",
+  "name": "antreaflowvisibility-grafana-sankey-plugin",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -10,21 +10,22 @@
     "sign": "grafana-toolkit plugin:sign",
     "start": "yarn watch"
   },
-  "author": "zyiou",
+  "author": "antreaflowvisibility",
   "license": "Apache-2.0",
   "devDependencies": {
     "@grafana/data": "latest",
-    "@grafana/toolkit": "latest",
+    "@grafana/toolkit": "^8.3.2",
     "@grafana/ui": "latest",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "emotion": "10.0.27"
   },
   "engines": {
     "node": ">=14"
   },
   "dependencies": {
+    "@types/jest": "^27.0.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
-    "react-google-charts": "^3.0.15",
-    "react-test-renderer": "^17.0.2"
+    "react-google-charts": "^3.0.15"
   }
 }

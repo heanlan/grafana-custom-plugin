@@ -1,69 +1,56 @@
 import React from 'react';
 import { PanelProps } from '@grafana/data';
-import Chart from 'react-google-charts';
 import { SankeyOptions } from 'types';
-import { css, cx } from 'emotion';
-import { stylesFactory } from '@grafana/ui';
+import Chart from 'react-google-charts';
 
 interface Props extends PanelProps<SankeyOptions> {}
 
 export const SankeyPanel: React.FC<Props> = ({ options, data, width, height }) => {
-  const styles = getStyles();
-  /*
-  process data for sankey diagram in following format, make sure to keep SQL result consistent with this format
-  [
+  let result = [
     ['From', 'To', 'Bytes'],
-    [sourcePodName, destinationPodName, throughput]
-  ]
-  */
-  const sankeyData = () => {
-    var result = [];
-    var n = data.series.length;
-    result.push(['From', 'To', 'Bytes']);
-    for (var i = 0; i < n; i++) {
-      var record = data.series[i].name?.split(',');
-      var source = record![0];
-      var destination = record![1];
-      if (destination === '') {
-        destination = record![2];
+    ['Source Pod', 'Destination Pod', 0.1],
+  ];
+  let source = data.series
+    .map((series) => series.fields.find((field) => field.name === 'sourcePodName'))
+    .map((field) => {
+      let record = field?.values as any;
+      return record?.buffer;
+    })[0];
+  if (source !== undefined) {
+    let destination = data.series
+      .map((series) => series.fields.find((field) => field.name === 'destinationPodName'))
+      .map((field) => {
+        let record = field?.values as any;
+        return record?.buffer;
+      })[0];
+    let destinationIP = data.series
+      .map((series) => series.fields.find((field) => field.name === 'destinationIP'))
+      .map((field) => {
+        let record = field?.values as any;
+        return record?.buffer;
+      })[0];
+    let bytes = data.series
+      .map((series) => series.fields.find((field) => field.name === 'bytes'))
+      .map((field) => {
+        let record = field?.values as any;
+        return record?.buffer;
+      })[0];
+    let n = source.length;
+    for (let i = 0; i < n; i++) {
+      let record = [];
+      record.push(source[i]);
+      if (destination[i] === '') {
+        record.push(destinationIP[i]);
+      } else {
+        record.push(destination[i]);
       }
-      var value = data.series[i].fields[1].state as any;
-      var stats = value.calcs as any;
-      result.push([source, destination, stats.sum]);
+      record.push(bytes[i]);
+      result.push(record);
     }
-    return result;
-  };
+  }
   return (
-    <div
-      className={cx(
-        styles.wrapper,
-        css`
-          width: ${width}px;
-          height: ${height}px;
-        `
-      )}
-    >
-      <Chart
-        width={600}
-        height={600}
-        chartType="Sankey"
-        loader={<div>Loading Chart</div>}
-        data={sankeyData()}
-        rootProps={{ 'data-testid': '1' }}
-      />
+    <div>
+      <Chart width={600} height={'600px'} chartType="Sankey" loader={<div>Loading Chart</div>} data={result} />
     </div>
   );
 };
-
-const getStyles = stylesFactory(() => {
-  return {
-    wrapper: css`
-      position: relative;
-    `,
-    svg: css`
-      position: absolute;
-      top: 0;
-      left: 0;
-    `,
-  };
-});
